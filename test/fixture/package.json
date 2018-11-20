@@ -1,0 +1,10 @@
+{
+  "operations": {
+    "encrypt": {
+      "globs": ["file.txt"],
+      "keyPath": "./key.json",
+      "ivsPath": "./ivs.json",
+      "test": true
+    }
+  }
+}
