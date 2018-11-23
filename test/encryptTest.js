@@ -30,15 +30,15 @@ beforeEach(async () => {
   ])
 })
 
-async function run(...argv) {
+async function run(op, ...argv) {
   await events.task({
     argv,
-    op: "encrypt",
+    op,
     path: `${__dirname}/fixture`,
   })
 }
 
 test("encrypt/decrypt", async () => {
-  await run("--password", "test")
-  await run("-a", "decrypt")
+  await run("encrypt", "--password", "test")
+  await run("decrypt")
 })

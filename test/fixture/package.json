@@ -1,5 +1,8 @@
 {
   "operations": {
+    "decrypt": {
+      "alias": "encrypt"
+    },
     "encrypt": {
       "glob": "file.txt",
       "keyPath": "./key.json",
