@@ -2,7 +2,7 @@ import dotEvent from "dot-event"
 import dotStore from "@dot-event/store"
 import dotTask from "@dot-event/task"
 
-import encrypt from "../dist/encrypt"
+import dotCrypt from "../dist/crypt"
 
 let events, store
 
@@ -10,20 +10,17 @@ beforeEach(async () => {
   events = dotEvent()
   store = dotStore({ events })
 
-  encrypt({ events, store })
+  dotCrypt({ events, store })
   dotTask({ events, store })
 
   await Promise.all([
-    events.fs({
-      action: "remove",
+    events.fsRemove({
       path: `${__dirname}/fixture/key.json`,
     }),
-    events.fs({
-      action: "remove",
+    events.fsRemove({
       path: `${__dirname}/fixture/ivs.json`,
     }),
-    events.fs({
-      action: "writeFile",
+    events.fsWriteFile({
       body: "hello",
       path: `${__dirname}/fixture/file.txt`,
     }),
@@ -39,6 +36,6 @@ async function run(op, ...argv) {
 }
 
 test("encrypt/decrypt", async () => {
-  await run("encrypt", "--password", "test")
-  await run("decrypt")
+  await run("crypt", "--encrypt", "--password", "test")
+  await run("crypt", "--decrypt")
 })

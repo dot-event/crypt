@@ -1,4 +1,4 @@
-# @dot-event/encrypt
+# @dot-event/crypt
 
 dot-event file encryption operation
 
