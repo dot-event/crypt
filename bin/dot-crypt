@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 
 const dotEvent = require("dot-event").default
-const dotStore = require("@dot-event/store").default
 const dotTask = require("@dot-event/task").default
 
 const dotCrypt = require("../dist/crypt").default
 
 const events = dotEvent()
-const store = dotStore({ events })
 
-dotCrypt({ events, store })
-dotTask({ events, store })
+dotCrypt({ events })
+dotTask({ events })
 
 events
   .task({

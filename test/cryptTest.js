@@ -1,17 +1,19 @@
+// Packages
 import dotEvent from "dot-event"
-import dotStore from "@dot-event/store"
 import dotTask from "@dot-event/task"
 
-import dotCrypt from "../dist/crypt"
+// Helpers
+import dotCrypt from "../"
 
-let events, store
+// Variables
+let events
 
+// Tests
 beforeEach(async () => {
   events = dotEvent()
-  store = dotStore({ events })
 
-  dotCrypt({ events, store })
-  dotTask({ events, store })
+  dotCrypt({ events })
+  dotTask({ events })
 
   await Promise.all([
     events.fsRemove({
