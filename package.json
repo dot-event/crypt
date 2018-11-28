@@ -10,10 +10,10 @@
   "author": "dot-event <oss@dot-event.io>",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dot-event/encrypt.git"
+    "url": "git+ssh://git@github.com/dot-event/crypt.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/dot-event/encrypt#readme",
+  "homepage": "https://github.com/dot-event/crypt#readme",
   "dependencies": {
     "@babel/runtime": "7.1.2",
     "@dot-event/argv": "2.10.5",
