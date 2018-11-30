@@ -13,7 +13,7 @@ dotTask({ events })
 events
   .task({
     argv: process.argv.slice(2),
-    op: "encrypt",
+    op: "crypt",
     path: process.cwd(),
   })
   .catch(function(e) {
