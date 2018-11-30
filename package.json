@@ -1,6 +1,6 @@
 {
   "name": "@dot-event/crypt",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "dot-event file encryption operation",
   "keywords": [
     "dot-event",
@@ -16,12 +16,12 @@
   "homepage": "https://github.com/dot-event/crypt#readme",
   "dependencies": {
     "@babel/runtime": "7.1.5",
-    "@dot-event/argv": "2.10.5",
-    "@dot-event/fs": "1.11.6",
-    "@dot-event/log": "0.13.1",
-    "@dot-event/store": "6.0.4",
-    "@dot-event/task": "1.11.7",
-    "dot-event": "2.12.5"
+    "@dot-event/argv": "2.10.6",
+    "@dot-event/fs": "1.11.7",
+    "@dot-event/log": "0.13.2",
+    "@dot-event/store": "6.0.5",
+    "@dot-event/task": "1.11.8",
+    "dot-event": "2.12.6"
   },
   "devDependencies": {
     "@babel/cli": "7.1.5",
