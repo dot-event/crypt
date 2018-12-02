@@ -43,6 +43,18 @@ test("first run", async () => {
 })
 
 test("second run", async () => {
-  await run("crypt", "--encrypt", "--password", "test")
+  await run("crypt", "--encrypt")
   await run("crypt", "--decrypt")
+})
+
+test("third run", async () => {
+  const path = `${__dirname}/fixture/file.txt`
+  await Promise.all([events.fsRemove({ path })])
+
+  await run("crypt", "--encrypt")
+  await run("crypt", "--decrypt")
+
+  const out = await events.fsReadFile({ path })
+
+  expect(out.toString()).toMatch("hello")
 })
