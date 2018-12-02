@@ -14,7 +14,17 @@ beforeEach(async () => {
 
   dotCrypt({ events })
   dotTask({ events })
+})
 
+async function run(op, ...argv) {
+  await events.task({
+    argv,
+    op,
+    path: `${__dirname}/fixture`,
+  })
+}
+
+test("first run", async () => {
   await Promise.all([
     events.fsRemove({
       path: `${__dirname}/fixture/key.json`,
@@ -27,17 +37,12 @@ beforeEach(async () => {
       path: `${__dirname}/fixture/file.txt`,
     }),
   ])
+
+  await run("crypt", "--encrypt", "--password", "test")
+  await run("crypt", "--decrypt")
 })
 
-async function run(op, ...argv) {
-  await events.task({
-    argv,
-    op,
-    path: `${__dirname}/fixture`,
-  })
-}
-
-test("encrypt/decrypt", async () => {
+test("second run", async () => {
   await run("crypt", "--encrypt", "--password", "test")
   await run("crypt", "--decrypt")
 })
