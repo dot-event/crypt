@@ -1,6 +1,6 @@
 {
   "name": "@dot-event/crypt",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "description": "dot-event file encryption operation",
   "keywords": [
     "dot-event",
@@ -17,8 +17,8 @@
   "dependencies": {
     "@babel/runtime": "7.2.0",
     "@dot-event/argv": "2.10.8",
-    "@dot-event/fs": "1.11.20",
-    "@dot-event/git": "0.6.26",
+    "@dot-event/fs": "1.11.21",
+    "@dot-event/git": "0.6.27",
     "@dot-event/log": "0.13.5",
     "@dot-event/store": "6.0.7",
     "@dot-event/task": "1.11.19",
