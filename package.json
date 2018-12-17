@@ -17,8 +17,8 @@
   "dependencies": {
     "@babel/runtime": "7.2.0",
     "@dot-event/argv": "2.10.8",
-    "@dot-event/fs": "1.11.16",
-    "@dot-event/git": "0.6.22",
+    "@dot-event/fs": "1.11.17",
+    "@dot-event/git": "0.6.23",
     "@dot-event/log": "0.13.5",
     "@dot-event/store": "6.0.7",
     "@dot-event/task": "1.11.15",
