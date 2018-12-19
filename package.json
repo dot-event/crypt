@@ -18,7 +18,7 @@
     "@babel/runtime": "7.2.0",
     "@dot-event/argv": "2.10.8",
     "@dot-event/fs": "1.11.25",
-    "@dot-event/git": "0.6.30",
+    "@dot-event/git": "0.6.31",
     "@dot-event/log": "0.13.5",
     "@dot-event/store": "6.0.7",
     "@dot-event/task": "1.11.23",
