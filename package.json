@@ -21,7 +21,7 @@
     "@dot-event/git": "0.6.30",
     "@dot-event/log": "0.13.5",
     "@dot-event/store": "6.0.7",
-    "@dot-event/task": "1.11.22",
+    "@dot-event/task": "1.11.23",
     "dot-event": "2.12.8"
   },
   "devDependencies": {
